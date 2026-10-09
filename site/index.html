@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#11131d">
+  <meta name="description" content="Soko Chat — beta komunikatora na Windows. Pobierz aplikację i rozmawiaj ze znajomymi.">
+  <title>Soko Chat — pobierz aplikację</title>
+  <style>
+    :root { color-scheme: dark; --bg:#11131d; --panel:#191c29; --line:#2a2e40; --text:#f4f5fb; --muted:#aab0c2; --accent:#6975ff; --green:#56d39a; }
+    * { box-sizing:border-box }
+    body { margin:0; min-height:100vh; background:radial-gradient(ellipse at 50% -20%,#34305f 0,transparent 55%),var(--bg); color:var(--text); font:16px/1.6 "Segoe UI",system-ui,sans-serif; }
+    main { width:min(920px,calc(100% - 36px)); margin:auto; padding:28px 0 56px }
+    header { display:flex; align-items:center; gap:12px; font-weight:750; letter-spacing:.2px }
+    .logo { width:38px;height:38px;border-radius:12px;background:linear-gradient(145deg,#8790ff,#535de5);display:grid;place-items:center;font-size:21px }
+    .hero { text-align:center; padding:100px 0 72px }
+    .tag { display:inline-flex;gap:8px;align-items:center;border:1px solid #3a4059;background:#202337;padding:6px 12px;border-radius:999px;color:#d8dbff;font-size:13px }
+    .dot { width:8px;height:8px;border-radius:100%;background:var(--green) }
+    h1 { font-size:clamp(42px,8vw,72px);line-height:1.05;letter-spacing:-2px;margin:24px 0 18px }
+    .lead { max-width:610px;margin:0 auto;color:var(--muted);font-size:18px }
+    .buttons { margin:32px 0 14px;display:flex;justify-content:center;gap:12px;flex-wrap:wrap }
+    a.button { display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 22px;border-radius:10px;text-decoration:none;font-weight:700 }
+    .primary { background:var(--accent);color:#fff;box-shadow:0 8px 30px #5865f255 }
+    .secondary { background:var(--panel);border:1px solid var(--line);color:var(--text) }
+    .hint { color:var(--muted);font-size:13px }
+    .cards { display:grid;grid-template-columns:repeat(3,1fr);gap:14px }
+    .card { padding:22px;border:1px solid var(--line);background:#191c29dd;border-radius:14px }
+    .card b { display:block;margin-bottom:5px }
+    .card p { margin:0;color:var(--muted);font-size:14px }
+    .notice { margin-top:22px;padding:16px 18px;border:1px solid #574d2c;background:#28251c;border-radius:12px;color:#e8dba9;font-size:14px }
+    footer { margin-top:42px;text-align:center;color:var(--muted);font-size:13px }
+    footer a { color:#c9ceff }
+    @media(max-width:650px){.hero{padding:72px 0 52px}.cards{grid-template-columns:1fr}.lead{font-size:16px}}
+  </style>
+</head>
+<body>
+  <main>
+    <header><span class="logo" aria-hidden="true">S</span><span>Soko Chat</span></header>
+    <section class="hero">
+      <span class="tag"><span class="dot"></span> Wersja beta</span>
+      <h1>Rozmawiaj po swojemu.</h1>
+      <p class="lead">Soko Chat to prosty komunikator dla znajomych. Pobierz aplikację na Windows, utwórz konto i zacznij rozmowę.</p>
+      <div class="buttons">
+        <a class="button primary" href="https://github.com/antyziel-soko/soko-chat/releases/download/beta/SokoChat-Windows.zip">Pobierz na Windows</a>
+        <a class="button secondary" href="https://github.com/antyziel-soko/soko-chat">Zobacz projekt na GitHubie</a>
+      </div>
+      <div class="hint">Windows 10/11 · Aplikacja desktopowa · Bez przeglądarki</div>
+    </section>
+    <section class="cards" aria-label="Funkcje">
+      <article class="card"><b>Znajomi i serwery</b><p>Dodawaj znajomych, twórz serwery i zapraszaj innych kodem.</p></article>
+      <article class="card"><b>Rozmowy na żywo</b><p>Wiadomości pojawiają się od razu dzięki połączeniu na żywo.</p></article>
+      <article class="card"><b>Twój wygląd</b><p>Wybierz ciemny albo jasny motyw i zapamiętaj logowanie na komputerze.</p></article>
+    </section>
+    <aside class="notice"><b>Uwaga: beta.</b> Aplikacja jest w trakcie rozwoju, mogą występować błędy. Nie używaj hasła, którego używasz w innych serwisach.</aside>
+    <footer>© 2026 Soko Chat · <a href="https://github.com/antyziel-soko/soko-chat">Kod źródłowy</a></footer>
+  </main>
+</body>
+</html>

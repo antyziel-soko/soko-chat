@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import sys
+import os
 from datetime import datetime
 
 from PySide6.QtCore import Qt, QThreadPool, QSettings, Slot
@@ -29,7 +30,10 @@ from client.api import ApiTask, start_api_task
 from client.auth_store import account_key, delete_token, load_token, save_token
 from client.socket_client import ChannelSocket
 
-DEFAULT_API = "http://127.0.0.1:8000"
+try:
+    from client.deployment_defaults import DEFAULT_API
+except ImportError:
+    DEFAULT_API = os.environ.get("SOKO_CHAT_API_URL", "http://127.0.0.1:8000")
 
 STYLE = """
 QWidget { background: #171923; color: #e8eaf2; font-family: Segoe UI; font-size: 14px; }
@@ -749,7 +753,11 @@ class AppController:
         self.login_window.show()
         api_url = self.prefs.value("auth/api_url", "")
         username = self.prefs.value("auth/username", "")
-        if api_url and username and self.saved_account_key:
+        if (
+            api_url.rstrip("/") == self.login_window.api_url.text().strip().rstrip("/")
+            and username
+            and self.saved_account_key
+        ):
             try:
                 token = load_token(self.saved_account_key)
             except Exception:

@@ -3,3 +3,7 @@
 data/
 __pycache__/
 *.py[cod]
+client/deployment_defaults.py
+build/
+dist/
+*.spec
