@@ -1,0 +1,1 @@
+"""Desktopowy klient Soko Chat."""
